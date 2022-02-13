@@ -22,3 +22,7 @@ for i in a
         swap a[i] with boundy
         increase boundy by 1
 ```
+
+Time Complexity: O(n)  
+Space Complexity: O(1)
+
