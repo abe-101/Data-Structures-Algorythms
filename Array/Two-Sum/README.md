@@ -28,7 +28,7 @@ Space Complexity: O(1)
 **Using Hash Set:**
 
 Pseudocode: 
-
+```
 initialize empty hash set
 for i: 0 to a.legnth-1
     if target-a[i] is in hash set
@@ -37,6 +37,7 @@ for i: 0 to a.legnth-1
         add a[i] to hash set
 
 no pair found, return null
+```
 
 Time Complexity: O(n)  
 Space Complexity: O(n)  
