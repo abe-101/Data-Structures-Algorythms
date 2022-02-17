@@ -2,13 +2,14 @@ public static int[] sortedSquare(int[] a) {
     if (a == null)
         return null;
 
-    int start = 0, end = reulstIndex = a.length-1;
+    int start = 0, end = a.length-1;
 
     int[] result = new int[a.length];
+    int resultIndex = result.length-1;
     
     while (start <= end) {
         // add larger one to the end of reslut
-        if abs(a[start]) > abs(a[end]) {
+        if (abs(a[start]) > abs(a[end])) {
             result[resultIndex--] = square(a[start++]);
         } else {
             result[resultIndex--] = square(a[end--]);
