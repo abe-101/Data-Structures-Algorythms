@@ -6,7 +6,7 @@ public static Integer subarrayWithMaxSum(int[] a) {
 
     for (int i = 1; i < a.length; i++) {
         maxEndingHere = Math.max(maxEndingHere + a[i], a[i]);
-        result = Math.max(result, maxEndingHere)
+        result = Math.max(result, maxEndingHere);
     }
-    return result
+    return result;
 }
