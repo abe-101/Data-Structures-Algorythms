@@ -11,15 +11,15 @@ How can you do it in O(n) time?
 
 
 Questions to Clarify:
-Q. Can there be both negative and positive numbers?
-A. Yes.
+Q. Can there be both negative and positive numbers?  
+A. Yes.  
 
-Q. Should the output  be a new array or the exiting array modified?
-A. Both are fine.
+Q. Should the output  be a new array or the exiting array modified?  
+A. Both are fine.  
 
 
 ## Solution
-Sorting aproach: We can calculate the square and then sort it. That would take O(nlogn(n)). the interviewer is looking for a solution with O(n) time.
+Sorting approach: We can calculate the square and then sort it. That would take O(nlogn(n)). the interviewer is looking for a solution with O(n) time.
 
 There is a patern in the array. The largest squares will be at either end. so we can look at either end grad the larger in move inward.
 
