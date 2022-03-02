@@ -1,6 +1,6 @@
 ---
 title: 1-Binary-Search
-updated: 2022-03-02 15:51:17Z
+updated: 2022-03-02 20:01:05Z
 created: 2022-02-28 16:42:46Z
 latitude: 40.71230000
 longitude: -74.00680000
@@ -51,3 +51,5 @@ public static int search(int[] a, int target) {
     return -1;
 }
 ```
+
+![BinarySearch.jpg](../../_resources/BinarySearch.jpg)
