@@ -1,6 +1,6 @@
 ---
 title: 1-Binary-Search
-updated: 2022-03-01 15:18:28Z
+updated: 2022-03-02 15:51:17Z
 created: 2022-02-28 16:42:46Z
 latitude: 40.71230000
 longitude: -74.00680000

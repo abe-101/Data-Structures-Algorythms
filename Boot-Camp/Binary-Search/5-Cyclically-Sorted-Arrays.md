@@ -1,6 +1,6 @@
 ---
 title: 5-Cyclically-Sorted-Arrays
-updated: 2022-03-01 20:18:23Z
+updated: 2022-03-02 15:30:45Z
 created: 2022-03-01 19:16:13Z
 tags:
   - binary search
@@ -26,12 +26,12 @@ A. Yes
 ## Solution
 
 Using binary search. The last element k will tell us if an element is part of first group or last group. (group 1 being element that have been rotated).
-now we can test any item in th earray and check which group its in, and know which direction to go:
+Now we can test any item in ith element and check which group its in, and know which direction to go:
 for any a\[i\] we encounter:
 if a\[i\] <= lastElement, it is in group 1. we go left.
 if a\[i\] > lastElement, it is in group 2. we go right.
 
-we know we reached min if the element before if greater. or in the case when there is no rotation there will be nothing on the left.
+We know we reached min if the element before it is greater. or in the case when there is no rotation there will be nothing on the left.
 Now we have 3 essential conditions for binary search.
 
 **Pseudocode**:
