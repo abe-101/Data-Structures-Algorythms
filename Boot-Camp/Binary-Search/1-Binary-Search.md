@@ -1,6 +1,6 @@
 ---
-title: Binary-Search
-updated: 2022-02-28 17:21:52Z
+title: 1-Binary-Search
+updated: 2022-03-01 15:18:28Z
 created: 2022-02-28 16:42:46Z
 latitude: 40.71230000
 longitude: -74.00680000
@@ -15,13 +15,12 @@ Given a sorted array, search for a target item?
 
 **Level**: Easy
 
-Questions to Clarify:
-Q. How do you want the output?  
-A. Return the index of the target item.  
+Questions to Clarify:  
+Q. How do you want the output?  
+A. Return the index of the target item.
 
-Q. What do do if target was not found?  
-A. Return -1  
-
+Q. What do do if target was not found?  
+A. Return -1
 
 ## Solution
 
@@ -30,6 +29,7 @@ Remember, log(n) here is base 2, because we are dividing the work by 2 each time
 Space Complexity: O(1)
 
 **code:**
+
 ```java
 public static int search(int[] a, int target) {
     if (a == null || target == null)

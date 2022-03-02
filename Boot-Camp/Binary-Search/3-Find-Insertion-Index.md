@@ -1,7 +1,10 @@
 ---
-title: Find-Insertion-Index
-updated: 2022-02-28 20:03:45Z
+title: 3-Find-Insertion-Index
+updated: 2022-03-01 15:47:25Z
 created: 2022-02-28 18:38:47Z
+tags:
+  - binary search
+  - easy
 ---
 
 ## Find Insertion Index
@@ -34,6 +37,8 @@ Q. What do we return if all elements are smaller than T?
 A. Return A.length, because that is where T should go.
 
 ## Solution
+
+We can narrow down the problem to: "Given an array A and Target T, Find thr first element larger than T." This will give us the index where T goes. We need to take care of the following edge cases. 1. if the input array is empty. 2.all the elements are larger than target return 0. 3. if all elements are less than taget return a.length.
 
 **Pseudocode**:
 
