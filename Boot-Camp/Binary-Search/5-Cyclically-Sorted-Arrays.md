@@ -1,6 +1,6 @@
 ---
 title: 5-Cyclically-Sorted-Arrays
-updated: 2022-03-02 15:30:45Z
+updated: 2022-03-03 22:57:50Z
 created: 2022-03-01 19:16:13Z
 tags:
   - binary search
@@ -80,3 +80,5 @@ public static int cyclicallySortedMin(int[] a) {
     return -1;
 }
 ```
+
+![CyclicallySortedmin.jpg](../../_resources/CyclicallySortedmin.jpg)
