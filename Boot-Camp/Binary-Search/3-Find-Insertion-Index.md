@@ -1,6 +1,6 @@
 ---
 title: 3-Find-Insertion-Index
-updated: 2022-03-01 15:47:25Z
+updated: 2022-03-03 15:13:15Z
 created: 2022-02-28 18:38:47Z
 tags:
   - binary search
@@ -93,3 +93,5 @@ public static int findInsertionIndex(int[] a, int target) {
     return -1; //should not happen
 }
 ```
+
+![findInsertionIndex.jpg](../../_resources/findInsertionIndex.jpg)
