@@ -1,6 +1,6 @@
 ---
 title: 6-Unkwown-Length-Search
-updated: 2022-03-01 23:18:03Z
+updated: 2022-03-03 22:57:30Z
 created: 2022-03-01 20:21:37Z
 tags:
   - binary search
@@ -9,27 +9,28 @@ tags:
 
 ## Search Array of Unknown length
 
-**Level**: Medium   
+**Level**: Medium
 
 You are given an array, but you don't know the length. Write a program to find
-a target element in the array.  
+a target element in the array.
 
 Questions to Clarify:
-Q. What happens if we try to access an index that is out of bounds?  
-A. An exception is thrown  
+Q. What happens if we try to access an index that is out of bounds?
+A. An exception is thrown
 
-Q. How do you want the output?  
-A. Return the index of target.  
+Q. How do you want the output?
+A. Return the index of target.
 
-Q. What to return if target is not found?  
-A. Return -1  
-
+Q. What to return if target is not found?
+A. Return -1
 
 ## Solution
-first we look for the end by doubling our guess's. 0, 2, 4, 8, 16, ... this will triger an exception in log(n) steps. we know now that it lies within a[i/2] and a[i]. We can perform binary serch on thoes to find the end. oncle we now the length we can do a regular binary search to find the target.
-One more thing to note. while not btter than O(log(n), we van make it more efficient. back in the first step if if a[i] is greater than target then you know that target is between a[i/2] and a[i].
+
+first we look for the end by doubling our guess's. 0, 2, 4, 8, 16, ... this will triger an exception in log(n) steps. we know now that it lies within a\[i/2\] and a\[i\]. We can perform binary serch on thoes to find the end. oncle we now the length we can do a regular binary search to find the target.
+One more thing to note. while not btter than O(log(n), we van make it more efficient. back in the first step if if a\[i\] is greater than target then you know that target is between a\[i/2\] and a\[i\].
 
 **Pseudocode**:
+
 ```
 high = 1
 lastIndex = -1
@@ -43,14 +44,15 @@ binary search from 0 to lastIndex for target element.
 ```
 
 **Test Cases**:
-Edge Cases: empty array, null array  
-Base Cases: single element, two elements  
-Regular Cases: power of 2 +- 1 / not a power of 2  
+Edge Cases: empty array, null array
+Base Cases: single element, two elements
+Regular Cases: power of 2 +- 1 / not a power of 2
 
-Time Complexity: O(log(n))  
-Space Complexity: O(1)  
+Time Complexity: O(log(n))
+Space Complexity: O(1)
 
 **code:**
+
 ```
 public static int findUnknownLength(int[] a, int target) {
     if (a == null || a.length == 0) {
@@ -118,4 +120,3 @@ private static int binarySearchOverRange(int[] a, int target, int low, int high)
 }
 
 ```
-
