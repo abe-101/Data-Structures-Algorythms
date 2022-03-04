@@ -1,6 +1,6 @@
 ---
 title: 6-Unkwown-Length-Search
-updated: 2022-03-03 22:57:30Z
+updated: 2022-03-04 16:56:37Z
 created: 2022-03-01 20:21:37Z
 tags:
   - binary search
@@ -26,8 +26,8 @@ A. Return -1
 
 ## Solution
 
-first we look for the end by doubling our guess's. 0, 2, 4, 8, 16, ... this will triger an exception in log(n) steps. we know now that it lies within a\[i/2\] and a\[i\]. We can perform binary serch on thoes to find the end. oncle we now the length we can do a regular binary search to find the target.
-One more thing to note. while not btter than O(log(n), we van make it more efficient. back in the first step if if a\[i\] is greater than target then you know that target is between a\[i/2\] and a\[i\].
+first we look for the end by doubling our guess's. 0, 2, 4, 8, 16, ... this will triger an exception in log(n) steps. We know now that it lies within a\[i/2\] and a\[i\]. We can perform binary search on these to find the end. Once we now the length we can do a regular binary search to find the target.
+One more thing to note. while not better than O(log(n), we can make it more efficient. Back in the first step if if a\[i\] is greater than target then you know that target is between a\[i/2\] and a\[i\].
 
 **Pseudocode**:
 
@@ -90,7 +90,7 @@ private static int binarySearchForLastIndex(int[] a, int low, int high) {
         }
 
         try {
-            int temp = a[midi+1];
+            int temp = a[mid+1];
         } catch (ArrayIndexOutOfBoundsException e) {
             // mid + 1 is out of bounds, mid is last index
             return mid;
@@ -120,3 +120,8 @@ private static int binarySearchOverRange(int[] a, int target, int low, int high)
 }
 
 ```
+
+
+
+![UnknownLengthSearch.jpg](../../_resources/UnknownLengthSearch.jpg)
+
