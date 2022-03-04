@@ -1,6 +1,6 @@
 ---
 title: 4-Record-and-Move-On
-updated: 2022-03-03 22:18:37Z
+updated: 2022-03-04 14:57:46Z
 created: 2022-02-16 20:26:20Z
 tags:
   - binary search
@@ -51,7 +51,7 @@ Space Complexity: O(1)
 
 **code:**
 
-```
+```java
 public static int closestElement(int[] a, int target) {
     if (a == null) {
         return -1;
@@ -81,7 +81,6 @@ private static int record(int[] a, int mid, int results, int target) {
 
     return results;
 }
-
 ```
 
 ![ClosestElement.jpg](../../_resources/ClosestElement.jpg)
