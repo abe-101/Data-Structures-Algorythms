@@ -1,6 +1,6 @@
 ---
 title: 7-Floor-Square-Root
-updated: 2022-03-02 16:29:22Z
+updated: 2022-03-04 17:32:39Z
 created: 2022-02-22 20:12:07Z
 tags:
   - binary search
@@ -57,7 +57,7 @@ Space Complexity: O(1)
 
 **code:**
 
-```
+```java
 public static int floorSquareRootDemo(int x) {
     if (x == 0)
         return 0;
@@ -83,5 +83,6 @@ public static int floorSquareRootDemo(int x) {
 
     return -1; // should not happen.
 }
-
 ```
+
+![FloorSquareRoot.jpg](../../_resources/FloorSquareRoot.jpg)
