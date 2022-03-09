@@ -5,8 +5,13 @@ class pathExistsDemo {
 
         State[][] memo = new State[a.length][a[0].length];
 
-        for (State[] states: memo)
-            Arrays.fill(states, State.UNVISITED);
+        //for (State[] states: memo)
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[0].length; j++) {
+                memo[i][j] = State.UNVISITED;
+            }
+        }
+            //Arrays.fill(states, State.UNVISITED);
 
         return pathExists(a, 0, 0, memo);
     }
@@ -30,7 +35,7 @@ class pathExistsDemo {
         };
 
         for (Pair point: points) {
-            if (pathExists(a, point.getFirst(), point.getSecond(), memo)) {
+            if (pathExists(a, point.i(), point.j(), memo)) {
                 return true;
             }
         }
@@ -48,6 +53,24 @@ class pathExistsDemo {
 
     private static boolean oob(int[][] a, int i, int j) {
         return i < 0 || i >= a.length || j < 0 || j >= a[0].length;
+    }
+
+    public static class Pair {
+        int i;
+        int j;
+
+        public Pair(int i, int j) {
+            this.i = i;
+            this.j = j;
+        }
+
+        public int i() {
+            return i;
+        }
+
+        public int j() {
+            return j;
+        }
     }
 
     public static void main(String[] args) {
