@@ -2,7 +2,7 @@ class solveSudokuDemo {
     public static void solveSudoku(int[][] board) {
         BoardChecker checker = new BoardChecker(board);
 
-        boolean success = solveSudoku(board, 0, 0 checker);
+        boolean success = solveSudoku(board, 0, 0, checker);
         if (!success) {
             throw new IllegalArgumentException("Board has no solution");
         }
@@ -24,7 +24,7 @@ class solveSudokuDemo {
                 checker.place(i, j, candidate);
                 board[i][j] = candidate;
 
-                if (solveSuduko(board, next.i(), next.j(), checker))
+                if (solveSudoku(board, next.i(), next.j(), checker))
                     return true;
 
                 // remove candidate from sqaure
@@ -79,7 +79,7 @@ class solveSudokuDemo {
             if(!canPlace(i, j, number))
                 return false;
 
-            row[i][number = true;
+            row[i][number] = true;
             column[j][number] = true;
             box[boxNumber(i,j)][number] = true;
 
@@ -87,7 +87,7 @@ class solveSudokuDemo {
         }
 
         public void remove(int i, int j, int number) {
-            row[i][number = false;
+            row[i][number] = false;
             column[j][number] = false;
             box[boxNumber(i,j)][number] = false;
         }
@@ -113,6 +113,41 @@ class solveSudokuDemo {
         public int j() {
             return j;
         }
+    }
+    public static void printBoard(int[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == 0)
+                    System.out.print("* ");
+                else
+                    System.out.print(board[i][j] + " ");
+                if (j == 2 || j == 5) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            if (i == 2 || i ==5) {
+                System.out.println();
+            }
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        int[][] board = {{ 8, 0, 0, 0, 0, 0, 0, 0, 0 },
+                         { 0, 0, 3, 6, 0, 0, 0, 0, 0 },
+                         { 0, 7, 0, 0, 9, 0, 2, 0, 0 },
+                         { 0, 5, 0, 0, 0, 7, 0, 0, 0 },
+                         { 0, 0, 0, 0, 4, 5, 7, 0, 0 },
+                         { 0, 0, 0, 1, 0, 0, 0, 3, 0 },
+                         { 0, 0, 1, 0, 0, 0, 0, 6, 8 },
+                         { 0, 0, 8, 5, 0, 0, 0, 1, 0 },
+                         { 0, 9, 0, 0, 0, 0, 4, 0, 0 }};
+        printBoard(board);
+        solveSudoku(board);
+        System.out.println("\n******Solution******\n");
+        printBoard(board);
     }
 }
 
