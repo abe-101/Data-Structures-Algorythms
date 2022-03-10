@@ -1,6 +1,6 @@
 ---
 title: 1-Fibonacci
-updated: 2022-03-07 17:10:59Z
+updated: 2022-03-10 18:53:40Z
 created: 2022-03-06 18:57:45Z
 ---
 
@@ -8,7 +8,7 @@ created: 2022-03-06 18:57:45Z
 
 **Level**: Very Easy
 
-Find the nth number in the Fibonacci series. Fibonacci series is as follows:
+Find the n<sup>th</sup> number in the Fibonacci series. Fibonacci series is as follows:
 
 1, 1, 2, 3, 5, 8, 13, 21, ..
 
@@ -17,7 +17,7 @@ After the first two 1’s, each number is the sum of the previous two numbers.
 ## Solution
 
 **Without Memoization**:
-Time Complexity: O(2^n)
+Time Complexity: O(2<sup>n</sup>)
 Space Complexity: O(n)
 
 ```java
@@ -47,3 +47,4 @@ public static int fibonacci(int n, HashMap<Integer, Integer> memo) {
     memo.put(n, result);
     return result;
 }
+```

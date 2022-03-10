@@ -1,6 +1,6 @@
 ---
 title: 8-Search-for-a-Peak
-updated: 2022-03-04 21:46:10Z
+updated: 2022-03-09 13:24:47Z
 created: 2022-03-02 16:30:41Z
 tags:
   - binary search
@@ -67,7 +67,7 @@ Space Complexity: O(1)
 
 **code:**
 
-```
+```java
 public static int findPeak(int[] a) {
     if (a == null || a.length == 0)
         return -1;
