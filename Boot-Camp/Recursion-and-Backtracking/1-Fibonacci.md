@@ -1,7 +1,11 @@
 ---
 title: 1-Fibonacci
-updated: 2022-03-10 18:53:40Z
+updated: 2022-03-13 13:45:40Z
 created: 2022-03-06 18:57:45Z
+tags:
+  - easy
+  - fibonacci
+  - recursion
 ---
 
 ## Fibonacci
@@ -34,7 +38,7 @@ Space Complexity: O(n)
 
 ```java
 public static int fibonacci(int n) {
-    return fibonacci(n, new hashMap<Integer, Integer>());
+    return fibonacci(n, new HashMap<Integer, Integer>());
 }
 
 public static int fibonacci(int n, HashMap<Integer, Integer> memo) {
@@ -48,3 +52,5 @@ public static int fibonacci(int n, HashMap<Integer, Integer> memo) {
     return result;
 }
 ```
+
+![fibonacci.jpg](../../_resources/fibonacci.jpg)
