@@ -1,7 +1,11 @@
 ---
 title: 3-Print-Combos
-updated: 2022-03-08 17:45:37Z
+updated: 2022-03-13 13:45:52Z
 created: 2022-03-07 15:24:09Z
+tags:
+  - buffer
+  - medium
+  - recursion
 ---
 
 ## Print Combos
@@ -23,7 +27,7 @@ A. Print nothing as there will be no combinations.
 ## Solution
 
 We use a buffer of size X with a recursive function "printCombosHelper".
-In any recursive call to printCombosHelper(), the buffer is filled up to a certain index i+1, and the task for the function call to fill index i. If i is greater the size of the buffer, then the buffer is full and we print its contents.
+In any recursive call to printCombosHelper(), the buffer is filled up to a certain index i-1, and the task for the function call to fill index i. If i is greater the size of the buffer, then the buffer is full and we print its contents.
 
 Otherwise, we find the candidates from the input array that can go into index i. We place each candidate into index i and then call printCombosHelper() for i+1
 
@@ -44,7 +48,7 @@ printCombosHelper(a, bufferr, startIndex, bufferIndex):
     
     for i: startIndex to a.length-1
         place a[i] into buffer[bufferIndex]
-        printCombos(a, buffer, i + 1, bufferIndex + 1)
+        printCombosHelper(a, buffer, i + 1, bufferIndex + 1)
 ```
 
 **Test Cases**:
@@ -66,8 +70,8 @@ public static void printCombos(int[] a, int x) {
     printCombosHelper(a, buffer, 0, 0);
 }
 
-public static void printCombosHelper(int[] a, int[] buffer, int startIndex,
-        int bufferIndex) {
+public static void printCombosHelper(int[] a, int[] buffer,
+    int startIndex, int bufferIndex) {
     // termination cases - buffer full
     if (bufferIndex == buffer.length) {
         for (int i = 0; i < buffer.length; i++) {
@@ -81,7 +85,7 @@ public static void printCombosHelper(int[] a, int[] buffer, int startIndex,
     }
 
     // find candidates that go into current buffer index
-    for (int i = startIndex; i< a.length; i++) {
+    for (int i = startIndex; i < a.length; i++) {
         // place item into buffer
         buffer[bufferIndex] = a[i];
 
@@ -90,3 +94,5 @@ public static void printCombosHelper(int[] a, int[] buffer, int startIndex,
     }
 }
 ```
+
+![findCombos.jpg](../../_resources/findCombos.jpg)

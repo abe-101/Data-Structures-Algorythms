@@ -1,6 +1,6 @@
 ---
 title: 10-Word-Break
-updated: 2022-03-10 18:42:47Z
+updated: 2022-03-11 17:15:56Z
 created: 2022-03-10 17:36:36Z
 ---
 
@@ -8,8 +8,7 @@ created: 2022-03-10 17:36:36Z
 
 **Level**: Medium
 
-Word Break Problem: Given a String S, which contains letters and no spaces, determine if you
-can break it into valid words. Return one such combination of words.
+Word Break Problem: Given a String S, which contains letters and no spaces, determine if you can break it into valid words. Return one such combination of words.
 You can assume that you are provided a dictionary of English words.
 For example:
 S = "ilikemangotango"

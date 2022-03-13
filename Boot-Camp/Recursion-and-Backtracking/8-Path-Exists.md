@@ -2,6 +2,10 @@
 title: 8-Path-Exists
 updated: 2022-03-09 04:16:20Z
 created: 2022-03-08 20:14:35Z
+tags:
+  - backtracking
+  - maze
+  - medium
 ---
 
 ## 

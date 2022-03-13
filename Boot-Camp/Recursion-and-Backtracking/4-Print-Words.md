@@ -1,7 +1,11 @@
 ---
 title: 4-Print-Words
-updated: 2022-03-07 20:12:54Z
+updated: 2022-03-10 19:57:00Z
 created: 2022-03-06 18:57:37Z
+tags:
+  - buffer
+  - medium
+  - recursion
 ---
 
 ## Print Words
@@ -9,6 +13,12 @@ created: 2022-03-06 18:57:37Z
 **Level**: Medium
 
 Phone Number Mnemonics: Given an N digit phone number, print all the strings that can be made from that phone number. Since 1 and 0 don't correspond to any characters, ignore them.
+
+For example:
+
+213 => AD, AE, AF, BD, BE, BF, CE, CE, CF
+
+456 => GJM, GJN, GJO, GKM, GKN, GKO,.. etc.
 
 Questions to Clarify:
 Q. Is the phone number of a specific size?
@@ -83,7 +93,6 @@ public static void printWordsHelper(int[] a, char[] buffer, int aIndex,
             System.out.print(buffer[i]);
         }
         System.out.println();
-        //printArray(buffer, bufferIndex);
         return;
     }
 
@@ -118,5 +127,4 @@ public static char[] getLetters(int digit) {
     }
     throw new IllegalArgumentException("Invalid digit " + digit);
 }
-
 ```
