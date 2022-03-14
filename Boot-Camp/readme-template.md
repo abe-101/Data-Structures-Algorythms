@@ -1,35 +1,27 @@
 ---
 title: readme-template
-updated: 2022-03-02 16:30:17Z
+updated: 2022-03-14 19:05:10Z
 created: 2022-02-22 20:12:07Z
 ---
 
-## 
+## **Template**
 
-**Level**: 
+<ins>**Level**:</ins>
 
 Questions to Clarify:
 Q.
 A.
 
-
 ## Solution
 
 **Pseudocode**:
-```
 
-```
-
-**Test Cases**:
+<ins>Test Cases:</ins>
 Corner Case -
-Base Case - 
-Regular Case - 
+Base Case -
+Regular Case -
 
-Time Complexity: 
-Space Complexity: 
+Time Complexity:
+Space Complexity:
 
 **code:**
-```
-
-```
-
