@@ -1,5 +1,5 @@
 import LinkedList.*;
-
+import javafx.util.Pair;
 
 class LinkedListDemo {
     public static void main(String[] args) {
@@ -15,6 +15,8 @@ class LinkedListDemo {
             int data = node.getData();
             System.out.println(data);
         }
+        LinkedList odd = new LinkedList();
+        LinkedList even = new LinkedList();
 
     }
 }

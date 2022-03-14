@@ -4,12 +4,11 @@ public class LinkedList {
     Node head;
     Node tail;
 
-    /*
     public LinkedList() {
         head = null;
         tail = null;
     }
-*/
+
     // Getters and Setters
     public LinkedList(Node head, Node tail) {
         super();
@@ -63,6 +62,19 @@ public class LinkedList {
             tail.setNext(toAdd);
         }
         tail = toAdd;
+    }
+
+    public void delete(Node n, Node prev) {
+        if (n == null)
+            return;
+
+        if (n == head)
+            head = n.getNext();
+        else if (n == tail)
+            tail = prev;
+
+        if (prev != null)
+            prev.setNext(n.getNext());
     }
 }
 
