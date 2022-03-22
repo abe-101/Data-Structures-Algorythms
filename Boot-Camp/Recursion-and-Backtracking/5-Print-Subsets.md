@@ -1,6 +1,6 @@
 ---
 title: 5-Print-Subsets
-updated: 2022-03-10 21:03:37Z
+updated: 2022-03-15 14:17:43Z
 created: 2022-03-08 15:07:33Z
 ---
 
@@ -35,6 +35,8 @@ Q. If the input is null, should we throw an exception of simply print nothing?
 A. Let's just print nothing.
 
 ## Solution
+
+using a buffer we simply move the print(array) out of the if clause so on each step the buffer gets printed
 
 **Pseudocode**:
 

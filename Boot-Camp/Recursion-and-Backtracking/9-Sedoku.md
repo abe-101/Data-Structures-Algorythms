@@ -1,6 +1,6 @@
 ---
 title: 9-Sedoku
-updated: 2022-03-11 17:15:20Z
+updated: 2022-03-16 13:04:46Z
 created: 2022-03-09 15:20:46Z
 tags:
   - backtracking
@@ -31,7 +31,7 @@ A. You can throw an error if no solution is found, i.e, the board is invalid.
 
 ## Solution
 
-We use backtracking here. We try placing all 9 numbers int the box. we only place a number if it doesn't violate the rules. If we reach the end we have found a solution.
+We use backtracking here. We try placing all 9 numbers int the box. We only place a number if it doesn't violate the rules. If we reach the end we have found a solution.
 How do we check if it follows the rules? We could use the brute force way and go through each row, colom and box.
 A better approach is to maintain an index. We keep a boolean matrix that keeps track of numbers in each row, another to keep track for columns and 3x3 boxes.
 **Pseudocode**:
@@ -69,6 +69,7 @@ Time Complexity: O(9n), where n is the number of squares on the board.
 Space Complexity: O(n), where n is the number of squares on the board.
 
 **code:**
+
 ```
 class solveSudokuDemo {
     public static void solveSudoku(int[][] board) {

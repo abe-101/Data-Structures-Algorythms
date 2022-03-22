@@ -1,6 +1,6 @@
 ---
 title: 4-Print-Words
-updated: 2022-03-10 19:57:00Z
+updated: 2022-03-14 21:54:53Z
 created: 2022-03-06 18:57:37Z
 tags:
   - buffer
@@ -128,3 +128,5 @@ public static char[] getLetters(int digit) {
     throw new IllegalArgumentException("Invalid digit " + digit);
 }
 ```
+
+![printWords.jpg](../../_resources/printWords.jpg)
