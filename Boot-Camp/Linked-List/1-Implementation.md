@@ -1,6 +1,6 @@
 ---
 title: 1-Implementation
-updated: 2022-03-13 18:02:01Z
+updated: 2022-03-16 13:10:39Z
 created: 2022-03-09 02:35:13Z
 tags:
   - easy
