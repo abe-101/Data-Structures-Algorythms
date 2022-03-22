@@ -81,4 +81,46 @@ public class LRUCache<k, V> {
 
 // Node that stores Key and values. It is a doubly linked list
 // so it stores next and previous nodes.
-//
+public class Node<K,V> {
+    Node<K,V> next;
+    Node<K,V> past;
+    K key;
+    V value;
+
+
+    public Node(K key, V value) {
+        super();
+        this.key = key;
+        this.value = value;
+    }
+
+
+    public Node<K,V> getNext() {
+        return next;
+    }
+
+
+    public void setNext(Node<K,V> next) {
+        this.next = next;
+    }
+
+    
+    public Node<K,V> getPrev() {
+        return prev;
+    }
+
+
+    public void setPrev(Node<K,V> prev) {
+        this.prev = prev;
+    }
+
+
+    public K getKey() {
+        return key;
+    }
+
+
+    public V getValue() {
+        return value;
+    }
+}
