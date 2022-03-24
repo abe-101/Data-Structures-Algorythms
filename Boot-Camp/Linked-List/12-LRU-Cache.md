@@ -1,21 +1,23 @@
 ---
 title: 12-LRU-Cache
-updated: 2022-03-22 14:52:25Z
+updated: 2022-03-22 16:26:45Z
 created: 2022-03-16 13:08:42Z
 ---
 
 ## **LRU Cache**
+
 Implement a data structure for a Least Recently Used (LRU) cache.
 
 <ins>**Level**:Hard</ins>
 
 Questions to Clarify:
-Q. What should we return if an entry wasn't found?
-A. Return null
+Q. What should we return if an entry wasn't found?  
+A. Return null  
 
 ## Solution
 
 **Pseudocode**:
+
 ```
 write(key, value)
     if full:
@@ -27,16 +29,17 @@ read(key)
     add Node back to the front
     return node's value
 ```
+
 <ins>Test Cases:</ins>
-Edge Cases: Null Node, Empty Data structure  
-Base Cases: Single element in Linked Hash Table  
-Regular Cases: Read/Write, Cache Full/Empty/Not Full  
+Edge Cases: Null Node, Empty Data structure  
+Base Cases: Single element in Linked Hash Table  
+Regular Cases: Read/Write, Cache Full/Empty/Not Full  
 
-Time Complexity: O(1) for both reads and writes  
-Space Complexity: O(n) where n is the amount of data in cache  
-
+Time Complexity: O(1) for both reads and writes  
+Space Complexity: O(n) where n is the amount of data in cache  
 
 **code:**
+
 ```
 public class LRUCache<k, V> {
     // map keys to node
@@ -163,3 +166,4 @@ public class Node<K,V> {
     }
 }
 
+```

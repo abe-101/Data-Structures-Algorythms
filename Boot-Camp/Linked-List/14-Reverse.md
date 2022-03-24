@@ -1,6 +1,6 @@
 ---
 title: 14-Reverse
-updated: 2022-03-22 16:01:09Z
+updated: 2022-03-22 16:26:31Z
 created: 2022-03-22 14:58:29Z
 tags:
   - easy
@@ -13,11 +13,11 @@ tags:
 Reverse a linked list. You should use O(1) space.
 
 Questions to Clarify:
-Q. Is is a singly linked list?
-A. Yes
+Q. Is is a singly linked list?  
+A. Yes  
 
-Q. How do you want the output?
-A. Return the new head of the linked list.
+Q. How do you want the output?  
+A. Return the new head of the linked list.  
 
 ## Solution
 
@@ -36,12 +36,12 @@ while curr != null
 ```
 
 <ins>Test Cases:</ins>
-Edge Cases: Empty list
-Base Cases: Single node, 2 nodes
-Regular Cases: > 2 nodes
+Edge Cases: Empty list  
+Base Cases: Single node, 2 nodes  
+Regular Cases: > 2 nodes  
 
-Time Complexity: O(n)
-Space Complexity: O(1)
+Time Complexity: O(n)  
+Space Complexity: O(1)  
 
 **code:**
 

@@ -1,6 +1,6 @@
 ---
 title: 15-IsPalindrome
-updated: 2022-03-22 16:15:14Z
+updated: 2022-03-22 16:26:00Z
 created: 2022-03-22 15:17:25Z
 tags:
   - linked list
@@ -13,24 +13,24 @@ tags:
 <ins>**Level**: Medium</ins>
 Is Palindrome: Given a Linked List, determine if it is a Palindrome.
 
-For example, the following lists are palindromes:
-A -> B -> C -> B -> A
-A -> B -> B -> A
-K -> A -> Y -> A -> K
-Note​: Do it with O(N) time and O(1) space? (Hint: Reverse a part of the list)
+For example, the following lists are palindromes:  
+A -> B -> C -> B -> A  
+A -> B -> B -> A  
+K -> A -> Y -> A -> K  
+Note​: Do it with O(N) time and O(1) space? (Hint: Reverse a part of the list)  
 
 Questions to Clarify:
-Q. Is this a singly linked list?
-A. Yes, there is no previous pointer.
+Q. Is this a singly linked list?  
+A. Yes, there is no previous pointer.  
 
-Q. Can we modify the input list?
-A. Yes
+Q. Can we modify the input list?  
+A. Yes  
 
-Q. Do we need to restore the list after modifying it?
-A. No need, you can leave it as you wish.
+Q. Do we need to restore the list after modifying it?  
+A. No need, you can leave it as you wish.  
 
-Q. What if the list is empty?
-A. Return false
+Q. What if the list is empty?  
+A. Return false  
 
 ## Solution
 
@@ -83,12 +83,12 @@ findMedian(head):
 ```
 
 <ins>Test Cases:</ins>
-Edge Cases: empty list
-Base Cases: single element, 2 elements (palindrome/not palindrome)
-Regular Cases: even and odd elements (palindrome/not palindrome)
+Edge Cases: empty list  
+Base Cases: single element, 2 elements (palindrome/not palindrome)  
+Regular Cases: even and odd elements (palindrome/not palindrome)  
 
-Time Complexity: O(n)
-Space Complexity: O(1)
+Time Complexity: O(n)  
+Space Complexity: O(1)  
 
 **code:**
 
