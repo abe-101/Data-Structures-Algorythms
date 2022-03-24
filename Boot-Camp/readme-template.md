@@ -1,6 +1,6 @@
 ---
 title: readme-template
-updated: 2022-03-14 19:05:10Z
+updated: 2022-03-23 14:24:11Z
 created: 2022-02-22 20:12:07Z
 ---
 
@@ -15,7 +15,9 @@ A.
 ## Solution
 
 **Pseudocode**:
+```
 
+```
 <ins>Test Cases:</ins>
 Corner Case -
 Base Case -
@@ -25,3 +27,6 @@ Time Complexity:
 Space Complexity:
 
 **code:**
+```java
+
+```
