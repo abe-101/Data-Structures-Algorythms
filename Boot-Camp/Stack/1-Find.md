@@ -1,6 +1,6 @@
 ---
 title: 1-Find
-updated: 2022-03-23 14:56:32Z
+updated: 2022-03-25 13:09:45Z
 created: 2022-03-22 18:30:46Z
 tags:
   - easy
@@ -66,6 +66,9 @@ public static boolean find(int target, Stack<Integer> s) {
             found = true;
             break;
         }
+        
+        temp.push(s.pop());
+    }
 
     while (!temp.isEmpty()) {
         s.push(temp.pop());
@@ -74,3 +77,5 @@ public static boolean find(int target, Stack<Integer> s) {
     return found;
 }
 ```
+
+![find.jpg](../../_resources/find.jpg)
