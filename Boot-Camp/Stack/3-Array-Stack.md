@@ -1,6 +1,6 @@
 ---
 title: 3-Array-Stack
-updated: 2022-03-23 14:54:42Z
+updated: 2022-03-27 01:20:28Z
 created: 2022-03-23 14:26:28Z
 tags:
   - medium
@@ -16,13 +16,13 @@ Use an array to implement 2 stacks.
 
 Questions to Clarify:  
 Q. Is the array of fixed size?  
-A. Yes, the size is provided as input.  
+A. Yes, the size is provided as input.
 
 Q. What to return if the array is full?  
-A. Throw an exception.  
+A. Throw an exception.
 
 Q. We will implement push() and pop() functions of the stack, is there any other function you want?  
-A. No, those two are enough.  
+A. No, those two are enough.
 
 ## Solution
 
@@ -50,7 +50,7 @@ pop(stack)
 <ins>Test Cases:</ins>
 Edge Cases: Array empty, array full, ​s1​ empty/full, ​s2​ empty/full  
 Base Cases: Single element in ​s1​/​s2​, array size 0,1,2  
-Regular Cases: Array size 10  
+Regular Cases: Array size 10
 
 Time Complexity: O(1) for both push() and pop()  
 Space Complexity: ​O(1) - no extra space used apart from the array.  
@@ -84,7 +84,7 @@ public class ArrayStack {
             a[s2--] = item;
     }
 
-    public int pop(int stackNUmber throws StackEmptyException {
+    public int pop(int stackNumber throws StackEmptyException {
         if (stacknumber != 1 && stackNumber != 2)
             throw new IllegalArgumentException("Invalid stack number.");
         
