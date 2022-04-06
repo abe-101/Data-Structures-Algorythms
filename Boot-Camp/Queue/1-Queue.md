@@ -1,6 +1,6 @@
 ---
 title: 1-Queue
-updated: 2022-03-27 17:56:58Z
+updated: 2022-03-31 21:40:58Z
 created: 2022-03-27 17:33:47Z
 tags:
   - easy
@@ -8,6 +8,8 @@ tags:
 ---
 
 ## **Queue**
+
+Implement a Queue using an array.
 
 <ins>**Level**: Easy</ins>
 
@@ -20,7 +22,7 @@ A. Yes
 ## Solution
 
 Implement a circular queue in the array. Maintain 2 pointers in the array, front and back. Add elements to the back and remove elements from the front.
-**The trink to making it easy: maintain a length variable* This keeps the number of elements in the queue. This way, we can easily tell if the queue is full or empty.
+**The trick to making it easy: maintain a length variable** This keeps the number of elements in the queue. This way, we can easily tell if the queue is full or empty.
 
 **Pseudocode**:
 
@@ -63,16 +65,16 @@ public class Queue {
     int back;
     int length;
     
- 	public Queue(int capacity) {
+    public Queue(int capacity) {
         a = new int[capacity];
-        front = back = length;
+        front = back = length = 0;
     }
     
     public void add(int item) throws QueueFullException {
         if (length == a.length)
             throw new QueueFullException();
         a[back] = item;
-        back (back+1) % a.length;
+        back = (back+1) % a.length;
         length++;
     }
     
@@ -80,7 +82,7 @@ public class Queue {
         if (length == 0)
             throw new QueueEmptyException();
         int result = a[front];
-        front (front+1) % a.length;
+        front = (front+1) % a.length;
         length--;
         return result;
     }

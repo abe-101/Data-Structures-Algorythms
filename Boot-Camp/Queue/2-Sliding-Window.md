@@ -1,6 +1,6 @@
 ---
 title: 2-Sliding-Window
-updated: 2022-03-28 15:06:11Z
+updated: 2022-03-31 21:47:04Z
 created: 2022-03-28 14:48:28Z
 tags:
   - easy
@@ -11,8 +11,7 @@ tags:
 
 <ins>**Level**: Easy</ins>
 Given an array of integers A, find the sum of each sliding window of size K.
-Variation:​ Instead of an array, what if you were presented with a ​stream​ of numbers. A new number
-can be added anytime. You want to find the sum of the last K elements.
+Variation:​ Instead of an array, what if you were presented with a ​stream​ of numbers. A new number can be added anytime. You want to find the sum of the last K elements.
 
 Questions to Clarify:
 Q. Is K provided as input?
@@ -54,22 +53,22 @@ Space Complexity: O(K), because we store at most K nodes in the queue
 
 ```java
 public static void slidingWindowSum(int[] a, int k) {
-	if (a == null || k == 0 || a.length == 0)
-		return;
-	
-	// LinkedList implements Queue interface in Java
-	Queue<Integer> q = new LinkedList<>();
-	int sum = 0;
-	for (int i = 0; i <a.length; i++) {
-		if (q.size() == k) {
-			int last = q.remove();
-			sum -= last;
-		}
-		q.add(a[i]);
-		sum += a[i];
-		if (q.size() == k) {
-			System.out.print(sum);
-		}
-	}
+    if (a == null || k == 0 || a.length == 0)
+        return;
+    
+    // LinkedList implements Queue interface in Java
+    Queue<Integer> q = new LinkedList<>();
+    int sum = 0;
+    for (int i = 0; i <a.length; i++) {
+        if (q.size() == k) {
+            int last = q.remove();
+            sum -= last;
+        }
+        q.add(a[i]);
+        sum += a[i];
+        if (q.size() == k) {
+            System.out.print(sum);
+        }
+    }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title: 3-Stock-Price-with-Time
-updated: 2022-03-28 15:46:38Z
+updated: 2022-04-01 17:30:19Z
 created: 2022-03-28 15:09:39Z
 tags:
   - medium
@@ -64,50 +64,50 @@ Space Complexity:​ O(n)
 
 ```java
 public class StockPriceWithTime {
-	Queue<Price> q;
-	int window;
-	
-	public StockPriceWithTime(int windowDays) {
-		q = new LinkedList<>();
-		window = windowDays;
-	}
-	
-	public void addPrice(int price, int day) {
-		while(!q.isEmpty() && q.peek(),getDay() < (day - window + 1))
-			q.remove();
-		
-		w.add(new Price(pricem day))
-	}
-	
-	// Returns max price in the last 3 days
-	public int getMax() {
-		int maxPrice = 0;
-		Iterator<Price> iter = q.iterator();
-		while (iter.hasNext()) {
-			int price = ((price) iter.next()).getPrice();
-			if (price > maxPrice)
-				maxPrice = price;
-		}
-		return maxPrice
-	}
+    Queue<Price> q;
+    int window;
+    
+    public StockPriceWithTime(int windowDays) {
+        q = new LinkedList<>();
+        window = windowDays;
+    }
+    
+    public void addPrice(int price, int day) {
+        while(!q.isEmpty() && q.peek().getDay() < (day - window + 1))
+            q.remove();
+        
+        w.add(new Price(pricem day))
+    }
+    
+    // Returns max price in the last 3 days
+    public int getMax() {
+        int maxPrice = 0;
+        Iterator<Price> iter = q.iterator();
+        while (iter.hasNext()) {
+            int price = ((price) iter.next()).getPrice();
+            if (price > maxPrice)
+                maxPrice = price;
+        }
+        return maxPrice
+    }
 }
 
 // Helper Code
 public class Price {
-	int price;
-	int day;
-	
-	public Price(int price, int day) {
-		this.price = price;
-		this.day = day;
-	}
-	
-	public int getPrice() {
-		return price;
-	}
-	
-	public int getDay() {
-		return day;
-	}
+    int price;
+    int day;
+    
+    public Price(int price, int day) {
+        this.price = price;
+        this.day = day;
+    }
+    
+    public int getPrice() {
+        return price;
+    }
+    
+    public int getDay() {
+        return day;
+    }
 }
 ```
