@@ -2,6 +2,9 @@
 title: 5-Print-Spiral
 updated: 2022-04-06 16:12:09Z
 created: 2022-04-06 15:48:26Z
+tags:
+  - matrix
+  - medium
 ---
 
 ## **Print In Spiral**

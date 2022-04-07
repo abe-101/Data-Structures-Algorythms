@@ -1,7 +1,10 @@
 ---
 title: 2-Two-Trades
-updated: 2022-04-04 19:35:17Z
+updated: 2022-04-07 13:28:29Z
 created: 2022-04-04 18:57:37Z
+tags:
+  - hard
+  - max diff
 ---
 
 ## **Two Trades**
@@ -22,22 +25,23 @@ Q. How do you want the result?
 A. Return the maximum amount of money you can make.
 
 ## Solution
-We are going to build on top of the Max Diff technique, and extend it further. This is why
-it is very important to learn these techniques. We recommend writing them on paper 3 or more
+
+We are going to build on top of the Max Diff technique, and extend it further. This is why it is very important to learn these techniques. We recommend writing them on paper 3 or more
 times. Get comfortable with these techniques and you can build upon them.
 Let’s say we have an array of prices. We introduce idea of best trade ​up to​ ​i​.
-This is the most money we can make with one trade, given the subarray ​prices[0..i]​.
-We can create this ​best_till_i​ array for each ​i​ in O(n) time and O(n) space.
-Now, let’s say we create another array ​best_from_i​, which is the most money we can make
-starting at ​i​. I.e, with the subarray ​prices[i..prices.length-1]
+This is the most money we can make with one trade, given the subarray ​prices\[0..i\]​.
+We can create this ​best\_till\_i​ array for each ​i​ in O(n) time and O(n) space.
+Now, let’s say we create another array ​best\_from\_i​, which is the most money we can make
+starting at ​i​. I.e, with the subarray ​prices\[i..prices.length-1\]
 Now, to find the maximum of 2 trades over the entire price array:
 for i -> 0 to prices.length
-max_2_trades = Max(max_2_trades, best_till_i[i] + best_from_i[i+1])
+max\_2\_trades = Max(max\_2\_trades, best\_till\_i\[i\] + best\_from\_i\[i+1\])
 This may not be very intuitive at first. Most people will not be able to come up with the perfect solution
 in the space of an interview. However, since you may be expected to come up with this, it is useful to
 know the building blocks of this technique.
 
 **Pseudocode**:
+
 ```
 1. create best_till_i array
 apply max_diff, stroe max_diff at each i in best_till_i
@@ -74,6 +78,7 @@ for i: a.length-1 to 1
 for i: 0 to prices.length-1
     max_2_trades = Max(max_2_trades, best_till_i[i] +  best_from_o[i+1])
 ```
+
 <ins>Test Cases:</ins>
 Edge Cases: empty array, null array
 Base Cases: one element, 2 elements (sorted asc/desc/equal)
@@ -83,6 +88,7 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 
 **code:**
+
 ```java
 public static Integer twoTrades(Integer[] prices) {
     if (prices == null || prices.length < 2)

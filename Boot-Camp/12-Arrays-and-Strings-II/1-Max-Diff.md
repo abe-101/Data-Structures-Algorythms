@@ -2,6 +2,9 @@
 title: 1-Max-Diff
 updated: 2022-04-04 19:26:56Z
 created: 2022-04-04 15:57:05Z
+tags:
+  - max diff
+  - medium
 ---
 
 ## **Max Diff**

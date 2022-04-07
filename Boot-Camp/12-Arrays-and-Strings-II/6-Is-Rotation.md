@@ -2,6 +2,9 @@
 title: 6-Is-Rotation
 updated: 2022-04-06 19:11:17Z
 created: 2022-04-06 18:55:15Z
+tags:
+  - easy
+  - substring
 ---
 
 ## **Is Rotation**

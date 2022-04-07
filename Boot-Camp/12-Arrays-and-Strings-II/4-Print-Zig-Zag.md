@@ -2,6 +2,9 @@
 title: 4-Print-Zig-Zag
 updated: 2022-04-05 12:11:16Z
 created: 2022-04-05 11:54:56Z
+tags:
+  - matrix
+  - medium
 ---
 
 ## **Print Zig Zag**

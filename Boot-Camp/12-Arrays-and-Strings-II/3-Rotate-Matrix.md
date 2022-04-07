@@ -1,7 +1,10 @@
 ---
 title: 3-Rotate-Matrix
-updated: 2022-04-06 15:37:37Z
+updated: 2022-04-07 13:29:40Z
 created: 2022-04-05 11:30:47Z
+tags:
+  - hard
+  - matrix
 ---
 
 ## **Rotate Matrix**
@@ -15,11 +18,11 @@ by 90 degrees, given an array of pixels as integers. For example,
 4 5 6 --> 8 5 2
 7 8 9       9 6 3
 
-Questions to Clarify:
-Q.
-A.
-
 ## Solution
+
+You can take each ring of the array, and rotate it individually. To do that, we can place each element in the ring to its final position. This is better explained on the following website:
+
+http://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/
 
 **Pseudocode**:
 

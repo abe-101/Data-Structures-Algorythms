@@ -2,6 +2,9 @@
 title: 7-Reverse-Words
 updated: 2022-04-06 19:35:50Z
 created: 2022-04-06 19:12:15Z
+tags:
+  - easy
+  - substring
 ---
 
 ## **Reverse Words**
