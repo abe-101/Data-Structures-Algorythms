@@ -47,3 +47,23 @@ Void read_graph(graph *g, bool directed) {
         insert_edge(g, x, y, directed);
     }
 }
+
+void insert_edge(graph * g, int x, int y, bool directed) {
+    edgenode *p;            // temporary pointer
+
+    p = malloc(sizeoff(edgenode));  // allocate edgenode storage
+    
+    p->weight = 0;
+    p->y = y;
+    p->next = g->edges[x];
+
+    g->edges[x] = p;        //insert at head of list
+    
+    g->degree[x]++;
+
+    if (!directed) {
+        insert_edge(g, y, x, true);
+    } else {
+        g->nedges++;
+    }
+}
