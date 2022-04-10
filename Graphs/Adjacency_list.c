@@ -33,3 +33,17 @@ void initialize_graph(graph *g, boo directed) {
     }
 }
 
+Void read_graph(graph *g, bool directed) {
+    int i;              // counter
+    int m;              // number of edges
+    int x, y;           // vertices in edge (x,y)
+
+    initialize_graph(g, directed);
+
+    scanf("%d %d", &(g->nvertices), &m);
+
+    for (i = 1; i <= m; i++) {
+        scanf("%d %d", &x, &y);
+        insert_edge(g, x, y, directed);
+    }
+}
