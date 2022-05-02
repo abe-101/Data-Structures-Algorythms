@@ -3,7 +3,7 @@
 
 #define MAXV    100         // maximum number of vertices
 
-void initialize_graph(graph *g, boo directed);
+void initialize_graph(graph *g, bool directed);
 void read_graph(graph *g, bool directed);
 void insert_edge(graph * g, int x, int y, bool directed);
 void print_graph(graph *g);
