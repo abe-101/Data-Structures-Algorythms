@@ -25,4 +25,8 @@ def uncompress(s):
     return ''.join(result)
 
 assert(uncompress("2c3a1t") == 'ccaaat')
+assert(uncompress("4s2b") == 'ssssbb')
+assert(uncompress("2p1o5p") == 'ppoppppp')
+assert(uncompress("3n12e2z") == 'nnneeeeeeeeeeeezz')
+assert(uncompress("127y") == 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
 print('-- Yay test completed!')
