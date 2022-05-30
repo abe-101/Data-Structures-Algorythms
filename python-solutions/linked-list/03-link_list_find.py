@@ -9,8 +9,8 @@ class Node:
 
 # Iterative
 def linked_list_find(head, target):
-    # Time:
-    # Space:
+    # Time: O(n)
+    # Space: O(1)
     current = head
     while current is not None:
         if current.val == target:
@@ -19,9 +19,14 @@ def linked_list_find(head, target):
     return False
 
 # Recursive
-#def linked_list_find
-    # Time:
-    # Space:
+def linked_list_find(head, target)
+    # Time: O(n)
+    # Space: O(n)
+    if head is None:
+        return False
+    if head.val == target:
+        return True
+    return linked_list_find(head.next, target)
 
 # test_00:
 a = Node("a")
