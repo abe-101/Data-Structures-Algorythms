@@ -13,8 +13,8 @@ class Node:
 
 # Iterative
 def get_node_value(head, index):
-    # Time:
-    # Space:
+    # Time: O(n)
+    # Space: O(n)
     current = head
     while current is not None:
         if index == 0:
@@ -22,10 +22,16 @@ def get_node_value(head, index):
         index -= 1
         current = current.next
     return None
+
 # Recursive
-#def get_node_value(head, index):
+def get_node_value(head, index):
     # Time:
     # Space:
+    if head is None:
+        return None
+    if index == 0:
+        return head.val
+    return get_node_value(head.next, index - 1)
 
 # test_00:
 a = Node("a")
@@ -70,4 +76,4 @@ node1.next = node2
 # banana -> mango
 assert(get_node_value(node1, 1) == 'mango')
 
-print('-- Yay == test completed!')
+print('-- Yay test completed!')
