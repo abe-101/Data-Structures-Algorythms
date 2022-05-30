@@ -23,9 +23,15 @@ def reverse_list(head):
     return prev
 
 # Recursive
-def reverse_list(head):
-    # Time:
-    # Space:
+def reverse_list(head, prev = None):
+    # Time: O(n)
+    # Space: O(n)
+    if head is None:
+        return prev
+    next = head.next
+    head.next = prev
+    return reverse_list(next, head)
+
 
 # test_00:
 a = Node("a")
