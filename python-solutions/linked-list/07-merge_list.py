@@ -74,7 +74,7 @@ q.next = r
 r.next = s
 s.next = t
 # 6 -> 8 -> 9 -> 25
-assert(merge_lists(a, q))
+assert(merge_lists(a, q) == a)
 # 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 20 -> 25 -> 28 
 # test_01:
 a = Node(5)
@@ -97,7 +97,7 @@ q.next = r
 r.next = s
 s.next = t
 # 1 -> 8 -> 9 -> 10
-assert(merge_lists(a, q))
+assert(merge_lists(a, q) == q)
 # 1 -> 5 -> 7 -> 8 -> 9 -> 10 -> 10 -> 12 -> 20 -> 28 
 # test_02:
 h = Node(30)
@@ -106,6 +106,6 @@ p = Node(15)
 q = Node(67)
 p.next = q
 # 15 -> 67
-assert(merge_lists(h, p))
+assert(merge_lists(h, p) == p)
 # 15 -> 30 -> 67
 print('-- Yay test completed!')

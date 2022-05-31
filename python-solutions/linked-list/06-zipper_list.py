@@ -13,7 +13,7 @@ class Node:
         self.val = val
         self.next = None
 
-def zipper_lists(head_2, head_1):
+def zipper_lists(head_1, head_2):
     # Time: O(min(n, m))
     # Space: O(1)
     origin = head_1
@@ -38,7 +38,7 @@ z = Node("z")
 x.next = y
 y.next = z
 # x -> y -> z
-assert(zipper_lists(a, x))
+assert(zipper_lists(a, x) == a)
 # a -> x -> b -> y -> c -> z
 # test_01:
 a = Node("a")
@@ -59,7 +59,7 @@ z = Node("z")
 x.next = y
 y.next = z
 # x -> y -> z
-assert(zipper_lists(a, x))
+assert(zipper_lists(a, x) == a)
 # a -> x -> b -> y -> c -> z -> d -> e -> f
 # test_02:
 s = Node("s")
@@ -74,7 +74,7 @@ one.next = two
 two.next = three
 three.next = four
 # 1 -> 2 -> 3 -> 4
-assert(zipper_lists(s, one))
+assert(zipper_lists(s, one) == s)
 # s -> 1 -> t -> 2 -> 3 -> 4
 # test_03:
 w = Node("w")
@@ -85,7 +85,7 @@ three = Node(3)
 one.next = two
 two.next = three
 # 1 -> 2 -> 3 
-assert(zipper_lists(w, one))
+assert(zipper_lists(w, one) == w)
 # w -> 1 -> 2 -> 3
 # test_04:
 one = Node(1)
@@ -96,7 +96,7 @@ two.next = three
 # 1 -> 2 -> 3 
 w = Node("w")
 # w
-assert(zipper_lists(one, w))
+assert(zipper_lists(one, w) == one)
 # 1 -> w -> 2 -> 3
 
 print('-- Yay test completed!')
