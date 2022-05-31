@@ -10,8 +10,8 @@ class Node:
 
 # Iterative
 def longest_streak(head):
-    # Time:
-    # Space:
+    # Time: O(n)
+    # Space: O(1)
     current = head
     max_streak = 0 
     current_streak = 0
@@ -26,10 +26,6 @@ def longest_streak(head):
         current = current.next
     return max_streak
 
-# Recursive
-#def longest_streak(head):
-    # Time:
-    # Space:
 
 a = Node(5)
 b = Node(5)
