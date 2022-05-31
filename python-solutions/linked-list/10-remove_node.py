@@ -19,8 +19,8 @@ class Node:
 
 # Iterative
 def remove_node(head, target_val):
-    # Time:
-    # Space:
+    # Time: O(n)
+    # Space: O(1)
     if head.val == target_val:
         return head.next
     current = head
@@ -34,9 +34,15 @@ def remove_node(head, target_val):
     return head
     
 # Recursive
-#def remove_node(head, target_val):
-    # Time:
-    # Space:
+def remove_node(head, target_val):
+    # Time: O(n)
+    # Space: O(n)
+    if head is None:
+        return None
+    if head.val == target_val:
+        return head.next
+    head.next = remove_node(head.next, target_val)
+    return head
 
 
 
