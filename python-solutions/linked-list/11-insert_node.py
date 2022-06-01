@@ -16,14 +16,40 @@ class Node:
         self.next = None
 
 # Iterative
-def
+def insert_node(head, value, index):
+    # Time:
+    # Space:
+    if index == 0:
+        new_head = Node(value)
+        new_head.next = head
+        return new_head
+    current = head
+    count = 0
+    while current is not None:
+        if count == index -1:
+            temp = current.next
+            current.next = Node(value)
+            current.next.next = temp
+        count += 1
+        current = current.next
+    return head
+
+# Recursive
+#def
     # Time:
     # Space:
 
-# Recursive
-def
-    # Time:
-    # Space:
+
+# TESTS
+# return linked list as a list
+def linked_list(head):
+    current = head
+    result = []
+    while current is not None:
+        result.append(current.val)
+        current = current.next
+    return result
+
 # test_00:
 a = Node("a")
 b = Node("b")
@@ -33,7 +59,7 @@ a.next = b
 b.next = c
 c.next = d
 # a -> b -> c -> d
-assert(insert_node(a, 'x', 2)
+assert(linked_list(insert_node(a, 'x', 2)) == list('abxcd'))
 # a -> b -> x -> c -> d
 # test_01:
 a = Node("a")
@@ -44,7 +70,7 @@ a.next = b
 b.next = c
 c.next = d
 # a -> b -> c -> d
-assert(insert_node(a, 'v', 3)
+assert(linked_list(insert_node(a, 'v', 3)) == list('abcvd'))
 # a -> b -> c -> v -> d
 # test_02:
 a = Node("a")
@@ -55,13 +81,13 @@ a.next = b
 b.next = c
 c.next = d
 # a -> b -> c -> d
-assert(insert_node(a, 'm', 4)
+assert(linked_list(insert_node(a, 'm', 4)) == list('abcdm'))
 # a -> b -> c -> d -> m
 # test_03:
 a = Node("a")
 b = Node("b")
 a.next = b
 # a -> b
-assert(insert_node(a, 'z', 0)
+assert(linked_list(insert_node(a, 'z', 0)) == list('zab'))
 # z -> a -> b
-print('-- Yay # test completed!')
+print('-- Yay test completed!')
