@@ -35,9 +35,23 @@ def insert_node(head, value, index):
     return head
 
 # Recursive
-#def
+def insert_node(head, value, index, count = 0):
     # Time:
     # Space:
+    if index == 0:
+        new_head = Node(value)
+        new_head.next = head
+        return new_head
+    if head is None:
+        return None
+    if count == index -1:
+        temp = head.next
+        head.next = Node(value)
+        head.next.next = temp
+        return
+    insert_node(head.next, value, index, count + 1)
+    return head
+
 
 
 # TESTS
