@@ -36,8 +36,8 @@ def insert_node(head, value, index):
 
 # Recursive
 def insert_node(head, value, index, count = 0):
-    # Time:
-    # Space:
+    # Time: O(n)
+    # Space: O(n)
     if index == 0:
         new_head = Node(value)
         new_head.next = head
