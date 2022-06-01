@@ -17,8 +17,8 @@ class Node:
 
 # Iterative
 def insert_node(head, value, index):
-    # Time:
-    # Space:
+    # Time: O(n)
+    # Space: O(1)
     if index == 0:
         new_head = Node(value)
         new_head.next = head
