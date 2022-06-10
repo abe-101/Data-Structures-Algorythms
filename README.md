@@ -7,3 +7,4 @@
 | 200| Number of Island  | [C](Matrix/Num-Islands/numIsland.c)                           |
 | 217| Contains Duplicate|                                                               |
 | 027| remove Element    | [python](LeetCode/027-Remove_Element.html)                    |
+| 027| remove Element    | [python](LeetCode/027-Remove_Element.md)                      |
