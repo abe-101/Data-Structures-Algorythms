@@ -3,6 +3,10 @@ title: 0977- Squares of a Sorted Array
 updated: 2022-06-10 16:54:10Z
 created: 2022-06-10 16:52:46Z
 source: https://leetcode.com/problems/squares-of-a-sorted-array/
+tags:
+  - easy
+  - python
+  - two pointers
 ---
 
 977\. Squares of a Sorted Array
