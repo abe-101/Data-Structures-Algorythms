@@ -1,6 +1,6 @@
 ---
 title: 0498-Diagonal Traverse
-updated: 2022-06-12 03:05:20Z
+updated: 2022-06-12 15:09:58Z
 created: 2022-06-12 03:02:57Z
 source: https://leetcode.com/problems/diagonal-traverse/
 ---
@@ -13,7 +13,7 @@ Given an `m x n` matrix `mat`, return *an array of all the elements of the array
 
 **Example 1:**
 
-![](../_resources/diag1-grid_00d606457d8c46eca784ed0f5bf28ede.jpg)
+![](../_resources/diag1-grid_00d606457d8c46eca784ed0f5bf28ede-1.jpg)
 
 ```
 Input: mat = [[1,2,3],[4,5,6],[7,8,9]]
@@ -66,3 +66,38 @@ class Solution:
 
 Time Complexity: O(M + N)
 Space Complexity: O(min(N, M))
+
+```python
+class Solution:
+    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
+        if not mat or not mat[0]:
+            return []
+        
+        N, M = len(mat), len(mat[0])
+        result = []
+        row, col = 0, 0
+        direction = 1
+        
+        while row < N and col < M:
+            result.append(mat[row][col])
+            new_row = row + (-1 if direction == 1 else 1)
+            new_col = col + (1 if direction == 1 else -1)
+            
+            if new_row < 0 or new_row == N or new_col < 0 or new_col == M:
+                if direction:
+                    row += (col == M - 1)
+                    col += (col < M - 1)
+                else:
+                    col += (row == N - 1)
+                    row += (row < N - 1)
+                    
+                direction = 1 - direction
+            else:
+                row = new_row
+                col = new_col
+                
+        return result
+```
+
+Time Complexity: O(M + N)
+Space Complexity: O(1)

@@ -1,6 +1,6 @@
 ---
 title: 0066-Plus One
-updated: 2022-06-10 22:20:24Z
+updated: 2022-06-13 18:03:05Z
 created: 2022-06-10 22:19:36Z
 source: https://leetcode.com/problems/plus-one/
 tags:
