@@ -13,20 +13,35 @@ class Node:
         self.left = None
         self.right = None
 
-# Recursive
+# DFS Recursive
+# def tree_value_count(root, target):
+#     # Time: O(n)
+#     # Space: O(n)
+#     if root is None:
+#         return 0
+#     match = 1 if root.val == target else 0
+# 
+#     return match + tree_value_count(root.left, target) + tree_value_count(root.right, target)
+
+# DFS Iterative
 def tree_value_count(root, target):
     # Time: O(n)
     # Space: O(n)
     if root is None:
         return 0
-    match = 1 if root.val == target else 0
 
-    return match + tree_value_count(root.left, target) + tree_value_count(root.right, target)
+    count = 0
+    stack = [ root ] 
+    while stack:
+        current = stack.pop()
+        if current.val == target:
+            count += 1
 
-# Iterative
-#def tree_value_count(root, target):
-    # Time:
-    # Space:
+        if current.left:
+            stack.append(current.left)
+        if current.right:
+            stack.append(current.right)
+    return count
 
 # test_00:
 
