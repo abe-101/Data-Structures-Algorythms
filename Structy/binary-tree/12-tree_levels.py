@@ -31,9 +31,9 @@ def tree_levels(root):
             levels[level_num].append(current.val)
 
         if current.left:
-            queue.append(current.left, level_num + 1)
+            queue.append((current.left, level_num + 1))
         if current.right:
-            queue.append(current.right, level_num + 1)
+            queue.append((current.right, level_num + 1))
 
     return levels
 
@@ -63,7 +63,7 @@ c.right = f
 #  / \     \
 # d   e     f
 
-assert(tree_levels (a) == [ ['a'], ['b', 'c'], ['d', 'e', 'f'])
+assert(tree_levels(a) == [ ['a'], ['b', 'c'], ['d', 'e', 'f']])
 
 # test_01:
 
@@ -94,7 +94,7 @@ f.left = i
 #      / \    /
 #     g  h   i
 
-assert(tree_levels (a) == [['a'],['b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']])
+assert(tree_levels(a) == [['a'],['b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']])
 
 # test_02:
 
@@ -121,9 +121,9 @@ u.right = v
 #  /
 # v
 
-assert(tree_levels (q) == [['q'],['r', 's'],['t'],['u'],['v']])
+assert(tree_levels(q) == [['q'],['r', 's'],['t'],['u'],['v']])
 
 # test_03:
 
-assert(tree_levels (None) == [])
+assert(tree_levels(None) == [])
 print('--Yay all tests passed!')
