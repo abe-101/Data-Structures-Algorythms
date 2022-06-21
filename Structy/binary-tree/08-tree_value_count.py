@@ -24,6 +24,28 @@ class Node:
 #     return match + tree_value_count(root.left, target) + tree_value_count(root.right, target)
 
 # DFS Iterative
+# def tree_value_count(root, target):
+#     # Time: O(n)
+#     # Space: O(n)
+#     if root is None:
+#         return 0
+# 
+#     count = 0
+#     stack = [ root ] 
+#     while stack:
+#         current = stack.pop()
+#         if current.val == target:
+#             count += 1
+# 
+#         if current.left:
+#             stack.append(current.left)
+#         if current.right:
+#             stack.append(current.right)
+#     return count
+
+from collections import deque
+
+# BFS 
 def tree_value_count(root, target):
     # Time: O(n)
     # Space: O(n)
@@ -31,16 +53,16 @@ def tree_value_count(root, target):
         return 0
 
     count = 0
-    stack = [ root ] 
-    while stack:
-        current = stack.pop()
+    queue = deque([ root ])
+    while queue:
+        current = queue.popleft()
         if current.val == target:
             count += 1
 
         if current.left:
-            stack.append(current.left)
+            queue.append(current.left)
         if current.right:
-            stack.append(current.right)
+            queue.append(current.right)
     return count
 
 # test_00:
