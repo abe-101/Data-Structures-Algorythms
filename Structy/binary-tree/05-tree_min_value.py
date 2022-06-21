@@ -22,19 +22,36 @@ class Node:
 #     smallest_right_value = tree_min_value(root.right)
 #     return min(root.val, smallest_left_value, smallest_right_value)
 
+# def tree_min_value(root):
+#     stack = [ root ]
+#     smallest = float("inf")
+#     while stack:
+#         current = stack.pop()
+#         if current.val < smallest:
+#             smallest = current.val
+# 
+#         if current.left:
+#             stack.append(current.left)
+#         if current.right:
+#             stack.append(current.right)
+#     return smallest
+
+from collections import deque
+
 def tree_min_value(root):
-    stack = [ root ]
+    queue = deque([ root ])
     smallest = float("inf")
-    while stack:
-        current = stack.pop()
+    while queue:
+        current = queue.popleft()
         if current.val < smallest:
             smallest = current.val
-
+        
         if current.left:
-            stack.append(current.left)
+            queue.append(current.left)
         if current.right:
-            stack.append(current.right)
-    return smallest
+            queue.append(current.right)
+    return smallest       
+    
 
 # test_00:
 
