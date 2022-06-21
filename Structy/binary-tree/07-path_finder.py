@@ -14,23 +14,51 @@ class Node:
         self.left = None
         self.right = None
 
+# def path_finder(root, target):
+#     if root is None:
+#         return None
+# 
+#     if root.val == target:
+#         return [ root.val ]
+# 
+#     left_path = path_finder(root.left, target)
+#     if left_path:
+#         return [ root.val, * left_path ]
+# 
+#     right_path = path_finder(root.right, target)
+#     if right_path:
+#         return [ root.val, * right_path ]
+# 
+#     return None
+
+# More efficient with append
 def path_finder(root, target):
+    result = _path_finder(root, target)
+    if result is None:
+        return None
+    else:
+        return result[::-1]
+
+def _path_finder(root, target):
     if root is None:
         return None
 
     if root.val == target:
         return [ root.val ]
 
-    left_path = path_finder(root.left, target)
+    left_path = _path_finder(root.left, target)
     if left_path:
-        return [ root.val, * left_path ]
+        left_path.append(root.val)
+        return left_path
 
-    right_path = path_finder(root.right, target)
+    right_path = _path_finder(root.right, target)
     if right_path:
-        return [ root.val, * right_path ]
+        right_path.append(root.val)
+        return right_path
 
     return None
 
+    
 # test_00:
 
 a = Node("a")
