@@ -1,6 +1,6 @@
 ---
 title: Note from lecture
-updated: 2022-04-06 17:18:39Z
+updated: 2022-04-07 15:55:22Z
 created: 2022-04-04 15:47:44Z
 ---
 
@@ -21,3 +21,5 @@ Two steps 1. reverse the whole string 2. reverse each word.
 Q. Longest Palindrome substring in a string?
 
 Fan out of each element and record the longest. Same for between each element.
+
+# Add/Multiply without Operators

@@ -1,6 +1,6 @@
 ---
 title: 11-Find-Cycle-Start
-updated: 2022-03-15 15:36:47Z
+updated: 2022-06-03 16:29:02Z
 created: 2022-03-15 15:12:34Z
 ---
 
@@ -11,10 +11,11 @@ created: 2022-03-15 15:12:34Z
 Given a Linked List with a cycle, find the node where the cycle begins.
 
 Questions to Clarify:
-Q. Can the entire list be a cycle?  
-A. Yes  
+Q. Can the entire list be a cycle?
+A. Yes
 
 ## Solution
+
 first we detect a cycle, then find the length of the cycle.
 Once you know the length of the cycle, it makes things easier. Let's say the length is L.
 Simply take 2 pointers ​A​ and ​B​, both at the start of the list. Move​ A​ forward by the L nodes.
@@ -24,6 +25,7 @@ Why does this work? Once you've found the length of the cycle (N nodes), then if
 nodes apart, they will eventually meet at the start when you move them forward together.
 
 **Pseudocode**:
+
 ```
 advance fast and slow pointers until they meat
 find the length of the cycle, by advancing one of the
@@ -35,14 +37,15 @@ the node they meet is the starting point of the cycle
 ```
 
 <ins>Test Cases:</ins>
-Edge Cases: no node in list  
-Base Cases: single element cycle  
-Regular Cases: cycle starts in middle, entire list is a cycle  
+Edge Cases: no node in list
+Base Cases: single element cycle
+Regular Cases: cycle starts in middle, entire list is a cycle
 
-Time Complexity: O(n)  
-Space Complexity: O(1)  
+Time Complexity: O(n)
+Space Complexity: O(1)
 
 **code:**
+
 ```
 public static int findCycleStart(Node head) {
     Node fast = head, slow = head;

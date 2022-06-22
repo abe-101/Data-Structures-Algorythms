@@ -1,6 +1,6 @@
 ---
 title: 8-Longets-Palindrome-Substring
-updated: 2022-04-07 13:07:05Z
+updated: 2022-04-08 20:35:37Z
 created: 2022-04-07 12:48:07Z
 tags:
   - medium
@@ -22,12 +22,14 @@ Q. Is a single character considered a palindrome?
 A. Yes
 
 ## Solution
+
 We look at odd length and even length palindromes.
 odd length have a character in middle. For every i we "spread" out checking if both sides are equal.
 
 for even length we look at the gaps in between elements.
 
 **Pseudocode**:
+
 ```
 Find odd palindrome
 got through each character
@@ -35,6 +37,7 @@ got through each character
     compare with largest palindrome found so far
 Do the same with even palindrome
 ```
+
 <ins>Test Cases:</ins>
 Edge Cases: empty string, null string
 Base Cases: one character, 2 characters
@@ -44,6 +47,7 @@ Time Complexity: O(n^2)
 Space Complexity: O(1)
 
 **code:**
+
 ```java
 public static Pair<Integer> longestPalindrome(String a) {
     if (a == null || a.isEmpty()) 
@@ -89,5 +93,4 @@ public static Pair<Integer> longestPalindrome(String a) {
 private static boolean isValidIndex(char[] a, int i) {
     return i >= 0 && i < a.length;
 }
-
 ```

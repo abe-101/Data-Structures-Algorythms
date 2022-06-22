@@ -1,6 +1,6 @@
 ---
 title: 5-Evaluate
-updated: 2022-03-23 21:55:33Z
+updated: 2022-05-10 16:08:38Z
 created: 2022-03-23 21:06:13Z
 ---
 
@@ -9,7 +9,7 @@ created: 2022-03-23 21:06:13Z
 <ins>**Level**: Hard</ins>
 Given an arithmetic expression with *,/,- & + operators and single digit numbers evaluate it and return the result.  
 For example,  
-1 + 2 / 1 + 3 * 2 ==> 9  
+1 + 2 / 1 + 3 * 2 ==> 9
 
 Questions to Clarify:  
 Q. Can the expression have parentheses - '()'?  
@@ -21,7 +21,7 @@ A. Yes that’s fine.
 
 Q. When we divide two numbers, is the result an integer or can it be a fraction?  
 E.g, 1⁄2 is 0 or 0.5?  
-A. Depends on your language. Here, we will use integer arithmetic, so 1⁄2 will be 0.  
+A. Depends on your language. Here, we will use integer arithmetic, so 1⁄2 will be 0.
 
 Q. Can we assume that the expression is valid?  
 A. Yes, assume that the expression is valid.
@@ -59,10 +59,10 @@ At the end result should be the only number on the operand stack
 <ins>Test Cases:</ins>
 Edge Cases: Empty expression, single number in expression  
 Base Cases: Single operation (​1+2, 1*2​)  
-Regular Cases: Multiple operators  
+Regular Cases: Multiple operators
 
 Time Complexity: O(n)  
-Space Complexity: O(n) because we store a copy of the operator/operands in the stacks  
+Space Complexity: O(n) because we store a copy of the operator/operands in the stacks
 
 **code:**
 
@@ -116,7 +116,7 @@ private static void process(Stack<Character> operator, Stack<Integer> operand) {
 
     int result = 0;
 
-    while(op) {
+    swich(op) {
         case '/': result = num1 / num2;
             break;
         case '*': result = num1 * num2;
@@ -127,5 +127,4 @@ private static void process(Stack<Character> operator, Stack<Integer> operand) {
             break;
     }
     operand.push(result);
-
 ```

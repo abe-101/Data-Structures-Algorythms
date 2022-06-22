@@ -1,6 +1,6 @@
 ---
 title: 2-Two-Trades
-updated: 2022-04-07 13:28:29Z
+updated: 2022-04-08 15:06:18Z
 created: 2022-04-04 18:57:37Z
 tags:
   - hard
@@ -10,6 +10,10 @@ tags:
 ## **Two Trades**
 
 <ins>**Level**: Hard</ins>
+
+Given a list of stock prices for a company, find the maximum amount of money you can make with two trades. A trade is a buy and sell.
+
+The two trades cannot overlap.
 
 Questions to Clarify:
 Q. Can the trades overlap?
@@ -26,25 +30,21 @@ A. Return the maximum amount of money you can make.
 
 ## Solution
 
-We are going to build on top of the Max Diff technique, and extend it further. This is why it is very important to learn these techniques. We recommend writing them on paper 3 or more
-times. Get comfortable with these techniques and you can build upon them.
+We are going to build on top of the Max Diff technique, and extend it further.
 Let’s say we have an array of prices. We introduce idea of best trade ​up to​ ​i​.
 This is the most money we can make with one trade, given the subarray ​prices\[0..i\]​.
 We can create this ​best\_till\_i​ array for each ​i​ in O(n) time and O(n) space.
-Now, let’s say we create another array ​best\_from\_i​, which is the most money we can make
-starting at ​i​. I.e, with the subarray ​prices\[i..prices.length-1\]
+Now, let’s say we create another array ​best\_from\_i​, which is the most money we can make starting at ​i​. I.e, with the subarray ​prices\[i..prices.length-1\]
 Now, to find the maximum of 2 trades over the entire price array:
 for i -> 0 to prices.length
 max\_2\_trades = Max(max\_2\_trades, best\_till\_i\[i\] + best\_from\_i\[i+1\])
-This may not be very intuitive at first. Most people will not be able to come up with the perfect solution
-in the space of an interview. However, since you may be expected to come up with this, it is useful to
-know the building blocks of this technique.
+This may not be very intuitive at first. Most people will not be able to come up with the perfect solution in the space of an interview. However, since you may be expected to come up with this, it is useful to know the building blocks of this technique.
 
 **Pseudocode**:
 
 ```
 1. create best_till_i array
-apply max_diff, stroe max_diff at each i in best_till_i
+apply max_diff, store max_diff at each i in best_till_i
 
 min_so_far = Infinity
 max_diff = 0
@@ -66,7 +66,7 @@ max_so_far = -Infinity
 max_diff = 0
 for i: a.length-1 to 1
     if a[i] > max_so_far
-        set a[i] > max_so_far
+        set a[i] as the new max_so_far
 
     if (max_so_far - a[i] > max_diff)
         new max_diff is max_so_far - a[i]
