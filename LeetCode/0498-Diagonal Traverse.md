@@ -13,7 +13,7 @@ Given an `m x n` matrix `mat`, return *an array of all the elements of the array
 
 **Example 1:**
 
-![](../_resources/diag1-grid_00d606457d8c46eca784ed0f5bf28ede-1.jpg)
+![](../_resources/diag1-grid_00d606457d8c46eca784ed0f5bf28ede.jpg)
 
 ```
 Input: mat = [[1,2,3],[4,5,6],[7,8,9]]

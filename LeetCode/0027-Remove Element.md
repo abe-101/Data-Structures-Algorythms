@@ -1,6 +1,6 @@
 ---
 title: 0027-Remove Element
-updated: 2022-06-10 14:48:01Z
+updated: 2022-06-22 17:12:07Z
 created: 2022-06-10 13:46:14Z
 source: https://leetcode.com/problems/remove-element/
 tags:
@@ -88,6 +88,7 @@ class Solution:
 ```
 
 Java:
+
 ```java
 class Solution {
     public void swap(int[] a, int i, int j) {

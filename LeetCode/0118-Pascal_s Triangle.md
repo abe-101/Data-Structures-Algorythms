@@ -1,6 +1,6 @@
 ---
 title: 0118-Pascal's Triangle
-updated: 2022-06-13 15:52:38Z
+updated: 2022-06-14 14:54:54Z
 created: 2022-06-13 15:52:17Z
 source: https://leetcode.com/problems/pascals-triangle/
 tags:
@@ -39,10 +39,11 @@ Output: [[1]]
 - `1 <= numRows <= 30`
 
 **Solution:**
+
 ```python
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
-        pascal = list(None*5)
+        result = []
         for i in range(numRows):
             if i == 0:
                 row = [1]
@@ -53,7 +54,7 @@ class Solution:
                 for j in range(1, i):
                     row.append(result[i-1][j-1] + result[i-1][j])
                 row.append(1)
-            pascal.append(row)
+            result.append(row)
 
-        return pascal
+        return result
 ```

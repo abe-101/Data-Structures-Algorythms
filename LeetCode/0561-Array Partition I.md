@@ -1,6 +1,6 @@
 ---
-title: 561 - Array Partition I
-updated: 2022-06-13 19:00:23Z
+title: 0561-Array Partition I
+updated: 2022-06-14 14:20:37Z
 created: 2022-06-13 18:58:41Z
 source: https://leetcode.com/problems/array-partition-i/
 ---
